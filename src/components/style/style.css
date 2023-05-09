@@ -47,6 +47,14 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.inner-box1 {
+  position: absolute;
+  width: calc(100% - 4.1rem);
+  height: calc(100% - 4.1rem);
+  top: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .forms-wrap {
   position: absolute;
@@ -54,6 +62,17 @@ main {
   width: 45%;
   top: 0;
   left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  transition: 0.8s ease-in-out;
+}
+.forms-wrap1 {
+  position: absolute;
+  height: 100%;
+  width: 45%;
+  top: 0;
+  right: -100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -224,6 +243,20 @@ main.sign-up-mode .carousel {
   overflow: hidden;
   transition: 0.8s ease-in-out;
 }
+.carousel1 {
+  position: absolute;
+  height: 100%;
+  width: 55%;
+  left: 100%;
+  top: 0;
+  background-color: #ffe0d2;
+  border-radius: 2rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding-bottom: 2rem;
+  overflow: hidden;
+  transition: 0.8s ease-in-out;
+}
 
 .images-wrapper {
   display: grid;
@@ -262,6 +295,7 @@ main.sign-up-mode .carousel {
   justify-content: center;
   flex-direction: column;
 }
+
 
 .text-wrap {
   max-height: 2.2rem;

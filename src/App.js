@@ -7,11 +7,14 @@ import { useState } from "react";
 // import "./App.css";
 
 export default function App() {
+  function onToggleHandler(){
+    console.log('check')
+  }
   return (
     <Router>
       <Routes>
         <Route path="/" element={<LogIn />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/signup" element={<SignUp setToggle={onToggleHandler}/>} />
       </Routes>
     </Router>
    

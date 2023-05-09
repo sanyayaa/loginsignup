@@ -7,9 +7,13 @@ import logo from "../images/logo.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function SignUp(className,setSwitchAuth) {
+export default function SignUp(className,setSwitchAuth,setToggle) {
 
   const [isSignUpMode, setIsSignUpMode] = useState(false);
+
+  function toggleImage (){
+    setToggle = 'true';
+  }
   
   function handleInputFocus(event) {
     event.target.classList.add("active");
@@ -40,8 +44,22 @@ export default function SignUp(className,setSwitchAuth) {
   return (
     <div className="className">
       <div className="box">
-        <div className="inner-box">
-          <div className="forms-wrap">
+        <div className="inner-box1">
+        <div className="carousel1">
+            <div className="images-wrapper">
+              <img src={img1} className="image img-1 show "  alt="" />
+
+            </div>
+            <div className="text-slider">
+              <div className="text-wrap">
+                <div className="text-group">
+                  <h2>Lorem ipsum dolor sit amet.</h2>
+
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div className="forms-wrap1">
             <form
               action="index.html"
               autoComplete="off"
@@ -54,7 +72,7 @@ export default function SignUp(className,setSwitchAuth) {
               <div className="heading">
                 <h2>Get Started</h2>
                 <h6>Already have an account?</h6>
-                <Link to="/" className="toggle">
+                <Link to="/" className="toggle" onClick={toggleImage}>
                   Sign In
                 </Link>
                 
@@ -110,22 +128,7 @@ export default function SignUp(className,setSwitchAuth) {
             </form>
           </div>
 
-          <div className="carousel">
-            <div className="images-wrapper">
-              <img src={img1} className="image img-1 show"  alt="" />
-              {/* <img src={img2} class="image img-2" alt="" /> */}
-              {/* <img src={img3} class="image img-3" alt="" /> */}
-            </div>
-            <div className="text-slider">
-              <div className="text-wrap">
-                <div className="text-group">
-                  <h2>Lorem ipsum dolor sit amet.</h2>
-                  {/* <h2>Customize as you like</h2> */}
-                  {/* <h2>Invite students to your class</h2> */}
-                </div>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>

@@ -19,9 +19,9 @@ export default function LogIn() {
     event.target.classList.remove("active");
   }
 
-  function handleToggleClick() {
-    setIsSignInMode((prevMode) => !prevMode);
-  }
+  // function handleToggleClick() {
+  //   setIsSignInMode((prevMode) => !prevMode);
+  // }
 
   // function handleBulletClick(event) {
   //   const index = event.target.dataset.value;
